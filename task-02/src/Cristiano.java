@@ -28,9 +28,10 @@ public class Cristiano {
         for (File file: directory.listFiles()){
             if (file.isFile()){
                 analyzeFile(file, nextWordDistribution);
+                printProbability(nextWordDistribution);
             }
         }
-        printProbability(nextWordDistribution);
+        
 
     }
 
