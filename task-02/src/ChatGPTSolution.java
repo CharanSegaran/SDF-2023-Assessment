@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class App {
+public class ChatGPTSolution {
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
             System.err.println("Usage: java NextWordDistributionAnalyzer <directory>");
@@ -25,10 +25,11 @@ public class App {
         for (File file : directory.listFiles()) {
             if (file.isFile()) {
                 analyzeFile(file, nextWordDistribution);
+                printNextWordDistribution(nextWordDistribution);
             }
         }
 
-        printNextWordDistribution(nextWordDistribution);
+        
     }
 
     private static void analyzeFile(File file, Map<String, Map<String, Integer>> nextWordDistribution) {
